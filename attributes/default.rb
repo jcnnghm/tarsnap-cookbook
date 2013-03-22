@@ -28,7 +28,7 @@ when 'freebsd'
   default['tarsnap']['conf_dir']          = "/usr/local/etc"
   default['tarsnap']['private_key']       = "/usr/local/etc/tarsnap.key"
 when 'ubuntu'
-  default['tarsnap']['packages']          = ['e2fslibs-dev']
+  default['tarsnap']['packages']          = ['e2fslibs-dev', 'zlib1g-dev', 'libssl-dev']
   default['tarsnap']['install_method']    = "sources"
   default['tarsnap']['bin_dir']           = "/usr/local/bin"
   default['tarsnap']['conf_dir']          = "/etc"
