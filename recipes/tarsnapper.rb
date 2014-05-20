@@ -45,7 +45,7 @@ template "tarsnapper.conf" do
 end
 
 cron "tarsnapper" do
-  path "$PATH:/usr/local/bin/"
+  path "$PATH:/usr/local/bin"
   %w{minute hour day month weekday}.each {|time|
     self.send(time, node['tarsnapper']['cron'][time]) unless node['tarsnapper']['cron'][time].nil?
   }
